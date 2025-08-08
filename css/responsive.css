@@ -1,0 +1,312 @@
+/* Additional Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .features {
+        padding: 3rem 0;
+    }
+
+    .about {
+        padding: 3rem 0;
+    }
+
+    .about-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .testimonial {
+        padding: 3rem 0;
+    }
+
+    .testimonial-quote {
+        font-size: 1.25rem;
+    }
+
+    .cta {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Navigation mobile styles */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Landscape Mobile Styles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 80vh;
+        padding-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .feature-icon {
+        background: #3498db;
+        background-size: 100% 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .navbar,
+    .nav-toggle,
+    .hero-buttons,
+    .cta-buttons,
+    .footer-bottom-right {
+        display: none;
+    }
+
+    .hero {
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero-title {
+        color: black !important;
+    }
+
+    .hero-subtitle {
+        color: #333 !important;
+    }
+
+    .features,
+    .about,
+    .testimonial,
+    .cta {
+        background: white !important;
+    }
+
+    .section-title,
+    .about-text h2,
+    .cta-content h2 {
+        color: black !important;
+    }
+
+    .feature-card,
+    .about-img {
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+
+    .cta {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+
+    .cta-content h2 {
+        color: black !important;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode styles removed - keeping white theme only */
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-link:focus,
+.feature-link:focus,
+.text-link:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Hover effects for better UX */
+.feature-card:hover .feature-link {
+    color: #333333;
+}
+
+.about-buttons .text-link:hover {
+    color: #333333;
+}
+
+/* Loading states */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Newsletter form validation */
+.newsletter-form input:invalid {
+    border-color: #e74c3c;
+}
+
+.newsletter-form input:valid {
+    border-color: #27ae60;
+}
